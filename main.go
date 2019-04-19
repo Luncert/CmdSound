@@ -5,6 +5,7 @@ package main
 */
 import "C"
 import (
+	"flag"
 	"bytes"
 	"encoding/binary"
 	"fmt"
@@ -73,6 +74,13 @@ var (
 )
 
 func main() {
+	musicPath := flag.String("music", "", "Input the music's path")
+	flag.Parse()
+	if *musicPath == "" {
+		fmt.Println("Usage: -name=$music_path")
+		return
+	}
+
 	sig := make(chan os.Signal, 1)
 	signal.Notify(sig, os.Interrupt, os.Kill)
 
@@ -80,7 +88,7 @@ func main() {
 	decoder, err := mpg123.NewDecoder("")
 	chk(err)
 
-	chk(decoder.Open("/home/luncert/Desktop/告白之夜.mp3"))
+	chk(decoder.Open(*musicPath))
 	defer decoder.Close()
 
 	// get audio format information
