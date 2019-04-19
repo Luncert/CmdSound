@@ -1,7 +1,7 @@
 # CmdSound
 
 A tool to play music and play animation in command line.
-[demo](res/record.gif)
+![demo](res/record.gif)
 
 ## Preparation
 
