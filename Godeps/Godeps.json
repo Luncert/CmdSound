@@ -1,0 +1,15 @@
+{
+	"ImportPath": "github.com/Luncert/CmdSound",
+	"GoVersion": "go1.9",
+	"GodepVersion": "v80",
+	"Deps": [
+		{
+			"ImportPath": "github.com/bobertlo/go-mpg123/mpg123",
+			"Rev": "1720ab305de3243e2b5edac55b05d449835194eb"
+		},
+		{
+			"ImportPath": "github.com/gordonklaus/portaudio",
+			"Rev": "00e7307ccd93051979a933c6fd5ead641eba5686"
+		}
+	]
+}
